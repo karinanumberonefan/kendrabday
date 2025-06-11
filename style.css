@@ -1,3 +1,16 @@
+
+/* WALL·E and EVE near the moon */
+.walle-eve {
+  position: fixed;
+  top: 108px;
+  right: 196px;
+  width: 42px;
+  opacity: 0.85;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -105,6 +118,12 @@ body {
 
 /* Button Styles */
 #options {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
   position: absolute;
   top: 20px;
   left: 20px;
@@ -114,13 +133,22 @@ body {
 }
 
 .option-button {
-  background: rgba(255,255,255,0.85);
-  border: none;
-  border-radius: 4px;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 20px rgba(200, 160, 255, 0.2);
+  transition: all 0.25s ease;
+}
+
+.option-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(210, 150, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 .option-button:hover { background: rgba(255,255,255,1); }
@@ -148,5 +176,33 @@ body {
 }
   100% {
     filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8));
+  }
+}
+
+#moon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  z-index: 2;
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9)) brightness(1.1);
+}
+
+.walle-eve {
+  position: fixed;
+  top: 112px;
+  right: 192px;
+  width: 50px; /* slightly smaller than the moon (70px) */
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+}
+
+@media (max-width: 600px) {
+  .walle-eve {
+    top: 105px;
+    right: 170px;
+    width: 40px;
   }
 }

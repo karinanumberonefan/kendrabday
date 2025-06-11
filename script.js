@@ -82,7 +82,7 @@ let specialStar = {
   ctrlX: 100,
   ctrlY: canvas.height / 2,
   y: canvas.height - 100,
-  radius: 8,
+  radius: 14,
   clickCount: 0,
   active: true,
   startX: 100,
@@ -94,7 +94,20 @@ let specialStar = {
 };
 
 
-function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;initStars();}
+function resizeCanvas(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  initStars();
+
+  // Randomize special star initial position
+  specialStar.x = Math.random() * canvas.width;
+  specialStar.y = Math.random() * canvas.height;
+  specialStar.ctrlY = canvas.height / 2;
+  specialStar.startX = specialStar.x;
+  specialStar.startY = specialStar.y;
+  specialStar.targetX = specialStar.x;
+  specialStar.targetY = specialStar.y;
+}
 window.addEventListener('resize',resizeCanvas);
 resizeCanvas();
 
@@ -143,11 +156,11 @@ function drawSky(delta){
     ctx.beginPath();
     ctx.arc(specialStar.x, specialStar.y, specialStar.radius, 0, 2 * Math.PI);
     const grad = ctx.createRadialGradient(specialStar.x, specialStar.y, 0, specialStar.x, specialStar.y, specialStar.radius * 2);
-    grad.addColorStop(0, '#cc66ff'); // bright purple core
-    grad.addColorStop(1, '#1a0033'); // dark purple outer
+    grad.addColorStop(0, '#ffccff'); // bright purple core
+    grad.addColorStop(1, '#660099'); // dark purple outer
     ctx.fillStyle = grad;
     ctx.shadowColor = 'white';
-    ctx.shadowBlur = 20;
+    ctx.shadowBlur = 35;
     ctx.fill();
   }
 
@@ -292,7 +305,7 @@ canvas.addEventListener('click',e=>{
   const distSpec = Math.hypot(dxSpec, dySpec);
   if (specialStar.active && distSpec < 25) {
     specialStar.clickCount++;
-    if (specialStar.clickCount < 2) {
+    if (specialStar.clickCount < 10) {
       specialStar.startX = specialStar.x;
       specialStar.startY = specialStar.y;
       do {
@@ -413,7 +426,7 @@ canvas.addEventListener('touchstart',e=>{
   const distSpec = Math.hypot(dxSpec, dySpec);
   if (specialStar.active && distSpec < 25) {
     specialStar.clickCount++;
-    if (specialStar.clickCount < 2) {
+    if (specialStar.clickCount < 10) {
       specialStar.startX = specialStar.x;
       specialStar.startY = specialStar.y;
       do {

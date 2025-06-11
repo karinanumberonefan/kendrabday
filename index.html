@@ -4,20 +4,44 @@
   <meta charset="UTF-8" />
   <title>Birthday Sky</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .option-button {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 20px rgba(200, 160, 255, 0.2);
+      transition: all 0.25s ease;
+    }
+
+    .option-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 30px rgba(210, 150, 255, 0.5);
+      transform: translateY(-2px);
+    }
+  </style>
+
 </head>
 <body>
   <!-- Button container -->
-  <div id="options">
-    <button id="btn-ego" class="option-button">I need an Ego boost</button>
-    <button id="btn-humble" class="option-button">I need to be humbled</button>
-    <button id="btn-surprise" class="option-button">Surprise me</button>
-  </div>
   <canvas id="stars"></canvas>
-  <img class="moon" src="crescent_moon_rotated.png" alt="moon">
+  <img class="moon" src="moon.webp" alt="moon">
+  <img class="walle-eve" src="walle_eve_white_lineart.png" alt="WALL·E and EVE">
+  <img class="walle-eve" src="walle_eve_white_lineart.png" alt="WALL·E and EVE">
   <img class="constellation" src="constellation_drift_1.png" alt="constellation">
   <div class="message">
     <h1 class="fade show">Kendra's Ego Manager</h1>
     <p id="subtext" class="fade show">What do you need from me?</p>
+    <div id="options">
+      <button id="btn-ego" class="option-button">I need an Ego boost</button>
+      <button id="btn-humble" class="option-button">I need to be humbled</button>
+      <button id="btn-surprise" class="option-button">Surprise me</button>
+    </div>
   </div>
   <footer>For when I'm not around</footer>
   <script src="script.js"></script>
