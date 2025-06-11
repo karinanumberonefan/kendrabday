@@ -305,6 +305,16 @@ canvas.addEventListener('click',e=>{
   const distSpec = Math.hypot(dxSpec, dySpec);
   if (specialStar.active && distSpec < 25) {
     specialStar.clickCount++;
+
+// --- Discord Webhook: Special Star Clicked ---
+fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `🌟 Special star clicked at ${new Date().toLocaleString()} (Click count: ${specialStar.clickCount + 1})`
+  })
+});
+
     if (specialStar.clickCount < 10) {
       specialStar.startX = specialStar.x;
       specialStar.startY = specialStar.y;
@@ -317,7 +327,17 @@ canvas.addEventListener('click',e=>{
       specialStar.progress = 0;
     }
 else {
-  specialStar.active = false;
+  
+// --- Discord Webhook: Special Event Triggered ---
+fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `🚨 Special event triggered at ${new Date().toLocaleString()}`
+  })
+});
+
+specialStar.active = false;
       document.querySelectorAll('.message, footer, h1, p, button').forEach(el => {
         el.classList.add('fade-out');
       });
@@ -379,6 +399,16 @@ setTimeout(() => {
     if(dist<hitRadius){
       const cx=canvas.width/2, cy=canvas.height*0.4;
       createParticleBurst(s.x,s.y);
+
+// --- Discord Webhook Notification ---
+fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `⭐ Star clicked at ${new Date().toLocaleString()}`
+  })
+});
+
       createGlowTrail(s.x,s.y,cx,cy);
       stars.splice(i,1);
       caughtStars++;
@@ -426,6 +456,16 @@ canvas.addEventListener('touchstart',e=>{
   const distSpec = Math.hypot(dxSpec, dySpec);
   if (specialStar.active && distSpec < 25) {
     specialStar.clickCount++;
+
+// --- Discord Webhook: Special Star Clicked ---
+fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `🌟 Special star clicked at ${new Date().toLocaleString()} (Click count: ${specialStar.clickCount + 1})`
+  })
+});
+
     if (specialStar.clickCount < 10) {
       specialStar.startX = specialStar.x;
       specialStar.startY = specialStar.y;
@@ -457,6 +497,16 @@ else {
     if(dist<hitRadius){
       const cx=canvas.width/2, cy=canvas.height*0.4;
       createParticleBurst(s.x,s.y);
+
+// --- Discord Webhook Notification ---
+fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `⭐ Star clicked at ${new Date().toLocaleString()}`
+  })
+});
+
       createGlowTrail(s.x,s.y,cx,cy);
       stars.splice(i,1);
       caughtStars++;
