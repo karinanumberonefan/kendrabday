@@ -40,16 +40,43 @@ const optionsDiv=document.getElementById('options'),
 function hideOptions(){optionsDiv.classList.add('fade-out');setTimeout(()=>{optionsDiv.style.display='none';},500);}
 
 btnEgo.addEventListener('click',()=>{
+// --- Discord Webhook: Ego Boost Clicked ---
+fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `💖 Ego Boost button clicked at ${new Date().toLocaleString()}`
+  })
+});
+
   if(egoboostMessages.length>0) activeMessages=shuffleArray(egoboostMessages.slice());
   else activeMessages=shuffleArray(defaultMessages.slice());
   hasChosen=true;hideOptions();
 });
 btnHumble.addEventListener('click',()=>{
+// --- Discord Webhook: Humble Clicked ---
+fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `🪞 Humble button clicked at ${new Date().toLocaleString()}`
+  })
+});
+
   if(humbleMessages.length>0) activeMessages=shuffleArray(humbleMessages.slice());
   else activeMessages=shuffleArray(defaultMessages.slice());
   hasChosen=true;hideOptions();
 });
 btnSurprise.addEventListener('click',()=>{
+// --- Discord Webhook: Surprise Clicked ---
+fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `🎲 Surprise button clicked at ${new Date().toLocaleString()}`
+  })
+});
+
   const combined=egoboostMessages.concat(humbleMessages);
   if(combined.length>0) activeMessages=shuffleArray(combined.slice());
   else activeMessages=shuffleArray(defaultMessages.slice());
