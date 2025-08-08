@@ -41,7 +41,7 @@ function hideOptions(){optionsDiv.classList.add('fade-out');setTimeout(()=>{opti
 
 btnEgo.addEventListener('click',()=>{
 // --- Discord Webhook: Ego Boost Clicked ---
-fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+fetch("https://discord.com/api/webhooks/1403193847386734683/SHLFanm1MqH-CMIDSi8MkHlZiHEF5VQEyxSwnTQIATA8-OEKXI6T77H4-qs_7NCOchF7", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -55,7 +55,7 @@ fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfF
 });
 btnHumble.addEventListener('click',()=>{
 // --- Discord Webhook: Humble Clicked ---
-fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+fetch("https://discord.com/api/webhooks/1403193847386734683/SHLFanm1MqH-CMIDSi8MkHlZiHEF5VQEyxSwnTQIATA8-OEKXI6T77H4-qs_7NCOchF7", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -69,7 +69,7 @@ fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfF
 });
 btnSurprise.addEventListener('click',()=>{
 // --- Discord Webhook: Surprise Clicked ---
-fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+fetch("https://discord.com/api/webhooks/1403193847386734683/SHLFanm1MqH-CMIDSi8MkHlZiHEF5VQEyxSwnTQIATA8-OEKXI6T77H4-qs_7NCOchF7", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -334,7 +334,7 @@ canvas.addEventListener('click',e=>{
     specialStar.clickCount++;
 
 // --- Discord Webhook: Special Star Clicked ---
-fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+fetch("https://discord.com/api/webhooks/1403193847386734683/SHLFanm1MqH-CMIDSi8MkHlZiHEF5VQEyxSwnTQIATA8-OEKXI6T77H4-qs_7NCOchF7", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -356,7 +356,7 @@ fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfF
 else {
   
 // --- Discord Webhook: Special Event Triggered ---
-fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+fetch("https://discord.com/api/webhooks/1403193847386734683/SHLFanm1MqH-CMIDSi8MkHlZiHEF5VQEyxSwnTQIATA8-OEKXI6T77H4-qs_7NCOchF7", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -428,7 +428,7 @@ setTimeout(() => {
       createParticleBurst(s.x,s.y);
 
 // --- Discord Webhook Notification ---
-fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+fetch("https://discord.com/api/webhooks/1403193847386734683/SHLFanm1MqH-CMIDSi8MkHlZiHEF5VQEyxSwnTQIATA8-OEKXI6T77H4-qs_7NCOchF7", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -485,7 +485,7 @@ canvas.addEventListener('touchstart',e=>{
     specialStar.clickCount++;
 
 // --- Discord Webhook: Special Star Clicked ---
-fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+fetch("https://discord.com/api/webhooks/1403193847386734683/SHLFanm1MqH-CMIDSi8MkHlZiHEF5VQEyxSwnTQIATA8-OEKXI6T77H4-qs_7NCOchF7", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -526,7 +526,7 @@ else {
       createParticleBurst(s.x,s.y);
 
 // --- Discord Webhook Notification ---
-fetch("https://discord.com/api/webhooks/1382442939883716680/3o2clMagUkYNQmcq0LfFqfGhsiNBWKXpu20oqECGhhfmrJyE_nQ8DYWq2dUcLGtLnQXB", {
+fetch("https://discord.com/api/webhooks/1403193847386734683/SHLFanm1MqH-CMIDSi8MkHlZiHEF5VQEyxSwnTQIATA8-OEKXI6T77H4-qs_7NCOchF7", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
